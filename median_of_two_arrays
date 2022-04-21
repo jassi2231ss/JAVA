@@ -1,19 +1,64 @@
-class Solution {
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-             ArrayList<Float> arr=new ArrayList<>();
-        int i;
-        for(i=0;i<nums1.length;i++)
-            arr.add((float)nums1[i]);
-        for(i=0;i<nums2.length;i++)
-            arr.add((float)nums2[i]);
-        Collections.sort(arr);
-        int size=arr.size();
-        if(size%2==1)
-            return (double)arr.get(size/2);
+import java.util.*;
+
+public class Main
+{
+       public static double findMedianSortedArrays(ArrayList<Integer>v1,ArrayList<Integer>v2) {
+     
+        v1.addAll(v2);
+        Collections.sort(v1);
+        System.out.println("Array "+v1);
+        int size=v1.size();
+        //1,2,3,4 even
+        //1,2,3 odd number
+        double result;
+        if(size%2==0)
+        {
+           
+            return (double)(v1.get(size/2) + v1.get((size/2)-1))/2;
+        }
         else
         {
-          
-            return (double)((arr.get(size/2)+arr.get((size/2)-1))/2);
+           
+            result=v1.get(size/2);
         }
+       
+       
+       
+        return result;
+       
+       
+       
+   
+}
+public static void main(String[] args) {
+ArrayList<Integer>v1=new ArrayList<Integer>();
+ArrayList<Integer>v2=new ArrayList<Integer>();
 
-    }}
+Scanner sc= new Scanner (System.in);
+for(int i=0;i<3;i++)
+{
+  int  a=sc.nextInt();
+   v1.add(a);
+}
+for(int i=0;i<3;i++)
+{
+   int a=sc.nextInt();
+   v2.add(a);
+}
+double res= Main.findMedianSortedArrays(v1,v2);
+System.out.println("Median = "+res);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
