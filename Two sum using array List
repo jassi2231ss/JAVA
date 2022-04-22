@@ -1,0 +1,50 @@
+import java.util.*;
+class Main {
+    public static ArrayList<Integer> twoSum(ArrayList<Integer>nums, int target) {
+        int a=-1,b=0;
+         for(int i=0;i<nums.size();i++)
+	 {
+	     for(int j=i+1;j<nums.size();j++)
+	     {
+	         if(nums.get(i)+nums.get(j)==target)
+	         {
+	         a=i;
+	         b=j;
+	         break;
+	         }
+	     }
+	     if( a>-1)
+	     {
+	         
+	     break;
+	     }
+	 }
+        
+       ArrayList<Integer> arr=new ArrayList<Integer>();
+        arr.add(a);
+        arr.add(b);
+        
+        return arr;
+    }
+
+
+public static void main(String[] args) {
+ArrayList<Integer>v1=new ArrayList<Integer>();
+
+Scanner sc= new Scanner (System.in);
+System.out.println("Enter the size of array");
+int s=sc.nextInt();
+
+for(int i=0;i<s;i++)
+{
+  int  a=sc.nextInt();
+   v1.add(a);
+}
+System.out.println("Enter the target");
+int t=sc.nextInt();
+
+ ArrayList<Integer> res=new ArrayList<Integer>();
+res.addAll(Main.twoSum(v1,t));
+System.out.println("The result is"+res);
+
+}}
