@@ -1,0 +1,33 @@
+import java.util.*;
+class Main
+{
+    
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the array");
+        int nums=sc.nextInt();
+        int arr[]=new int[nums];
+        for(int i=0;i<nums;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        ArrayList<Integer>v1 = new ArrayList<Integer>();
+  
+        // Using add() method to add elements in array_list
+        for (int i = 0; i < arr.length; i++)
+            v1.add(arr[i]);
+        System.out.println("Array before deletion"+v1);
+    
+    for(int i=0; i<v1.size(); i++)
+    {
+        for(int j=i+1; j<v1.size(); j++) 
+        {
+            if(v1.get(i)==v1.get(j))
+            v1.remove(j);
+        }
+        
+        }
+        System.out.println("Array after deletion"+v1);
+    } 
+    }
