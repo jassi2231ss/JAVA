@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class Main
+{
+    public static int checkCount(ArrayList<Integer>v1)
+    {
+        int count=0;
+        int max=0;
+        int element=0;
+        for(int i=0;i<v1.size();i++)//3,3,2,3,2
+        {
+            count=1;
+            for(int j=i+1;j<v1.size();j++)
+            {
+               if(v1.get(i)==v1.get(j))
+               count++;//2,
+             
+            }
+            if(max<count)//3<2
+            {
+              max=count; //max=3
+              element=v1.get(i);
+            }
+        }
+        return element;
+    }
+public static void main(String[] args) {
+ArrayList<Integer>v1=new ArrayList<Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the size");
+int a=sc.nextInt();
+for(int i=0;i<a;i++)
+{
+   int n=sc.nextInt();
+   v1.add(n);
+}
+int res=Main.checkCount(v1);
+System.out.print(res);
+}
+}
