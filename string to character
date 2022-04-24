@@ -1,0 +1,12 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args) {
+  Scanner sc=new Scanner(System.in);
+  String str=sc.next();
+  // hello as h e l l o
+  String[] str1 = str.split("");
+ for(int i=0;i<str.length();i++)
+System.out.print(str1[i]+",");
+}
+}
