@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class Main
+{
+   
+public static void main(String[] args) {
+ArrayList<Integer>v1=new ArrayList<Integer>();
+ArrayList<Integer>v2=new ArrayList<Integer>();
+ArrayList<Integer>v3=new ArrayList<Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the size");
+int a=sc.nextInt();
+System.out.println("Enter the array1");
+for(int i=0;i<a;i++)
+{
+   int n=sc.nextInt();
+   v1.add(n);
+}
+System.out.println("Enter the array1");
+for(int j=0;j<a;j++)
+{
+   int n=sc.nextInt();
+   v2.add(n);
+}
+for(int x:v1)//v1=3,2,5,4,7,8//v2=9,8,5,4,2,3
+{
+   if(v2.contains(x))
+   continue;
+   
+   else
+   v3.add(x);
+}
+for(int b:v2)//v1=3,2,5,4,7,8//v2=9,8,5,4,2,3
+{
+   if(v1.contains(b))
+   continue;
+   
+   else
+   v3.add(b);
+}
+
+Collections.sort(v3);
+System.out.print(v3);
+}
+}
+//Input: nums = [3,2,1,3,2]
+//Output: 3
