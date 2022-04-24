@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args) {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter the size of the  characters");
+  int a=sc.nextInt();
+   ArrayList<String>v1=new ArrayList<String>();
+   System.out.println("Enter the  characters");
+   for(int i=0;i<a;i++)
+   {
+    String b=sc.next();
+    v1.add(b);
+   }
+    System.out.println(v1);
+  String str="";
+   for(String x:v1)
+   str=str+x;
+  System.out.println(str);
+
+}
+}
