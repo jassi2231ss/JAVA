@@ -1,0 +1,20 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the string");
+        String str=sc.nextLine();
+       
+        char[] arr=new char[str.length()];     //creating a character array to store all the characters in the array
+        int j=0;
+        for(int i=str.length()-1; i>=0; i--)
+        {
+            arr[j]=str.charAt(i);
+            j++;
+        }
+        for(char x:arr)
+        
+        System.out.print(x);
+    }
+}
