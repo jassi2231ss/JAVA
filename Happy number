@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isHappy(int n) {
+      int sum=0;
+        int r;
+        if(n<7 &&n>1)          // happy number starts with 1,7 so we check if the number is greater than 1 and less than 7 it will return false
+          return false;
+        if(n==1)
+            return true;
+        while(n>0)
+        {
+             r=n%10;
+            sum=sum+(r*r);
+            n=n/10;     
+        }
+        return isHappy(sum);   // recursively calls the method isHappy
+    }
+}
